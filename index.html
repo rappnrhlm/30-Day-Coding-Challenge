@@ -6,61 +6,55 @@
     <title>LearnWeb</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
 
 <style>
-
-    body{
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    body {
         background:
         radial-gradient(ellipse at 20% 30%, rgba(56, 189, 248, 0.4) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 70%),
         radial-gradient(ellipse at 60% 20%, rgba(236, 72, 153, 0.25) 0%, transparent 50%),
         radial-gradient(ellipse at 40% 80%, rgba(34, 197, 94, 0.2) 0%, transparent 65%);
         background-color: #0f172a;
+        height: 100vh;
+        margin: 0;
     }
 
-    header{
-        font-family: "Poppins", sans-serif;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 92vh;
+        text-align: center;
+        font-family: "Poppins", Serif;
+    }
+
+    .title {
         font-weight: 800;
-        font-style: normal;
         font-size: xxx-large;
         color: white;
     }
 
-    .dailyreport {
-        text-align: center;
-    }
-    .dailyreport a{
-        display: inline-block;
-        text-align: center;
-        font-family: Poppins, sans-serif;
-        font-weight: 400;
+    .btn {
+        font-family: "Lora", Serif;
+        font-size: xx-large;
         background: white;
-        border-radius: 15px;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 10px 90px;
         text-decoration: none;
-        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+        border-radius: 50px;
+        transition: 0.3s ease;
         color: black;
-        font-size: smaller;
-        transition: transform 0.2s;
-        mix-blend-mode: screen;
-    }
-    .dailyreport a:hover {
-        font-weight: bold;
-        transform: translateY(-6px);
-        box-shadow: 1px 10px 10px rgb(0, 0, 0, 0.35);
+        /* mix-blend-mode: screen; */
     }
 
+    .btn:hover {
+        transform: translateY(-10px);
+        font-weight: 700;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.54);
+    }
 
     footer {
-        /* margin-top: auto; */
         text-align: center;
     }
 
@@ -69,16 +63,16 @@
 </head>
 <body>
     <header>
-        <p style="text-align: center;">30 Days Belajar Web Design Tanpa AI</b>
     </header>
     
-    <main>
-        <h1 class="dailyreport"><a href="dailyreport.html">Daily Report</a>
+    <main class="container">
+        <p class="title">30 Days Belajar Web Design<br>Tanpa AI</p>
+        <a href="dailyreport.html" class="btn">Daily Report</a>
     </main>
-
-<footer>
-    <p style="color: white;">🚀 developed by @rappnrhlm_ 🚀</p>
-</footer>
+    
+    <footer>
+        <p style="color: white;">🚀 developed by @rappnrhlm_ 🚀</p>
+    </footer>
 
 </body>
 </html>

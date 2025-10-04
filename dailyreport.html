@@ -4,41 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAILY REPORT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+
+<style>
+
+    *, html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    header {
+        background: linear-gradient(90deg,rgba(27, 0, 51, 1) 4%, rgba(66, 5, 102, 1) 41%, rgba(145, 39, 207, 1) 100%);
+        
+        padding: 15px 10px;
+        
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        font-family: Poppins;
+        
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.645);
+    }
+    
+    
+    .title {
+        cursor: pointer;
+        transition: all .3s ease 0s;
+    }
+    
+    .title:hover {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.527);
+        /* transform: translateY(-1px); */
+    }
+    
+    nav ul {
+        display: flex;
+        padding: 6px 0;
+        margin: auto;
+    }
+    
+    li {
+        list-style-type: none;
+        padding: 0 6px;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+        transition: all .3s ease 0s;
+    }
+    
+    li a:hover {
+        background: #1B0033;
+        padding: 0 12px;
+        border-radius: 100px;
+        box-shadow: 0 0 10px black;
+        font-weight: 700;
+    }
+    
+    .container {
+
+        margin-top: 4vh;
+
+        font-family: Poppins;
+        font-weight: 800;
+
+        /* background: red; */
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .btn {
+        color: #1B0033;
+        background-color: #efd4ff;
+        padding: 30px 80px;
+        border-radius: 30px;
+        
+        font-size: xx-large;
+        text-align: center;
+
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.275);
+
+        transition: all .3s ease 0s;
+    }
+
+    .btn:hover {
+        transform: translateY(-10px);
+        box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.275);
+    }
+
+
+    footer {
+        padding: 10px;
+    }
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <h1 style="text-align: center;">DAILY REPORT</h1>
+    <h2 class="title">DAILY REPORT</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">BACK</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutme.html">ABOUT</a></li>
+        </ul>
+    </nav>
 </header>
 
-<hr>
-
-<nav>
-    <ul>
-        <li>
-            <a href="index.html">BACK</a> |
-            <a href="index.html">HOME</a> |
-            <a href="aboutme.html">ABOUT</a>
-        </li>
-    </ul>
-</nav>
-
-<hr>
-
-<main>
-
-<div>
-    <h1>DAY 1-10    <a href="parthtml">(HTML)</a>
-</div>
-
-<div>
-    <h1>DAY 11-20   <a href="partcss">(CSS)</a>
-</div>
-
-<div>
-    <h1>DAY 21-30   <a href="partjs">(JS)</a>
-</div>
-
+<main class="container">
+    <a href="parthtml" class="btn">DAY 1-10<br>(HTML)</a><br>
+    <a href="partcss" class="btn">DAY 11-20<br>(CSS)</a><br>
+    <a href="partjs" class="btn"> DAY 21-30<br>(JS)</a><br>
 </main>
 
 <footer style="text-align: center;">
