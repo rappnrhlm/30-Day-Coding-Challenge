@@ -4,30 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman profil diri sederhana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+
+<style>
+    *, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background: linear-gradient(20deg,rgb(0, 51, 14) 4%, rgb(5, 102, 63) 41%, rgb(39, 207, 112) 100%); */
+    background: #bdfcd4;
+
+}
+
+/*  */
+
+header {
+    background: linear-gradient(200deg,rgb(0, 51, 14) 4%, rgb(5, 102, 63) 41%, rgb(39, 207, 112) 100%);
+    padding: 20px;
+    
+}
+.title {
+    text-align: center;
+    color: white;
+    font-family: Poppins;
+    font-weight: 900;
+    /* letter-spacing: 1px; */
+}
+
+/*  */
+
+nav {
+    background: white;
+    padding: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nava {
+    display: inline-block;
+
+    background: none;
+    color: rgb(0, 51, 14);
+    
+    padding: 5px 100px;
+
+    font-family: Roboto;
+    font-weight: 500;
+
+    box-shadow: none;
+
+    border-radius: 0px;
+
+    transition: all 0.3s ease 0s;
+
+    /* transition: all 0.5s ease 0s; */
+}
+.nava:hover {
+    /* transform: translateY(0); */
+
+    color: white;
+
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    font-weight: 900;
+
+    background: rgb(0, 51, 14);
+
+    border-radius: 100px;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Lora;
+    font-weight: 400;
+}
+
+.card {
+      background: #fff;
+      padding: 30px 55px;
+      border-radius: 12px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+      line-height: 1.8;
+      text-align: left;
+      max-width: 400px;
+
+      font-family: Poppins;
+
+      transition: all 0.3s ease 0s;
+    }
+
+.card a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 2px 8px 10px rgba(0,0,0,0.15);
+}
+.card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: darkgreen;
+}
+
+
+</style>
+
 </head>
 <body>
 
 <header>
-    <h1>PROFIL DIRI SEDERHANA</h1>
+    <h1 class="title">PROFIL DIRI SEDERHANA</h1>
 </header>
 
-<hr>
 
 <nav>
     <ul>
-        <li><a href="index.html">BACK</a></li>
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="../aboutme.html">ABOUT</a></li>
+        <li>
+            <a class="nava" href="index.html">BACK</a>
+            <a class="nava" href="../../index.html">HOME</a>
+            <a class="nava" href="../../aboutme.html">ABOUT</a>
+        </li>
     </ul>
 </nav>
 
-<hr>
-
 <main>
-    <h3>Nama: Muhammad Raffa Nurhalim
-    <h3>Panggilan: Raffa
-    <h3>Umur: 16 Tahun
-    <h3>Sekolah: <a href="https://smkn2-pekanbaru.sch.id/en/">SMK NEGERI 2 PEKANBARU</a>
+    <div class="card">
+        <p><b>Nama:</b> Muhammad Raffa Nurhalim
+        <p><b>Panggilan:</b> Raffa
+        <p><b>Umur:</b> 16 Tahun
+        <p><b>Sekolah:</b> <a href="https://smkn2-pekanbaru.sch.id/en/">SMK NEGERI 2 PEKANBARU</a>
+    </div>
 </main>
 
 <footer style="text-align: center;">

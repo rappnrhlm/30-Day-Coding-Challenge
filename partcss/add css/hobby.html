@@ -1,56 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOBBY</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOBBY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: rgb(42, 42, 42);
+      color: #000;
+      font-family: Poppins, sans-serif;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      /* position: sticky; */
+      top: 0;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      transition: 0.3s;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem 0;
+    }
+
+    article {
+        width: 80%;
+        padding: 100px 50px;
+        border-radius: 15px;
+        max-width: 800px;
+        color: #fff;
+        background-size: cover; /* biar dak gepeng */
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        transition: all 1s ease 0s;
+    }
+    article:hover {
+        width: 90%;
+        padding: 200px 50px;
+        /* font-size: x-large; */
+    }
+    article:hover li{
+        font-size: xx-large;
+    }
+    article:hover dl{
+        font-size: x-large;
+    }
+
+
+    article::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.74)
+        );
+        /* border-radius: ; */
+    }
+
+        article:nth-child(1) { background: url(../../piclib/hobbypicdir/1.png); }
+        article:nth-child(2) { background: url(../../piclib/hobbypicdir/2.png); }
+        article:nth-child(3) { background: url(../../piclib/hobbypicdir/3.png); }
+        article:nth-child(4) { background: url(https://akmweb.youngjoygame.com/web/gms/image/c6c7a1fff685a10e9cc80829c62199f9.png); }
+        /* article:nth-child(4) { background: url(../../piclib/hobbypicdir/4.png); } */
+        article:nth-child(5) { background: url(https://mediashower.com/img/465D440A-B787-11E6-A0D9-ECEA9A456B31/bigstock-New-Skills-on-a-wood-cube-in-a-110782271_600x.jpg); }
+
+
+    article * {
+        position: relative;
+        z-index: 2;
+    }
+    article li {
+        font-weight: 700;
+        list-style: none;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        transition: all 1s ease 0s;
+    }
+
+    article dl {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        transition: all 1s ease 0s;
+    }
+
+
+    footer {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem;
+      text-align: center;
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* @media (max-width: 768px) {
+      header h1 { font-size: 2rem; letter-spacing: 3px; }
+      article { width: 90%; padding: 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      /* article { width: 95%; padding: 1rem; } */
+      /* article li { font-size: 1rem; }} */
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>MY HOBBY GWE</h1>
+    <i style="color: rgba(255, 255, 255, 0.558); font-size: x-small;">(card bisa dihover)</i>
+  </header>
 
-<header>
-    <h1>MY HOBBY</h1>
-</header>
-
-<hr>
-
-<nav>
+  <nav>
     <ul>
-        <li><a href="index.html">BACK</a></li>
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="../aboutme.html">ABOUT</a></li>
+      <li><a href="index.html">BACK</a></li>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../aboutme.html">ABOUT</a></li>
     </ul>
-</nav>
+  </nav>
 
-<hr>
+  <main>
+    <article>
+      <ul><li>Badminton</li></ul>
+      <dl>Suka main aja sih ga kompetitif banget</dl>
+    </article>
 
-<main>
-    <ul>
-        <article>
-        <b><li>Badminton</li></b>
-            <dl>Badminton, atau bulu tangkis, adalah olahraga raket yang dimainkan oleh dua orang (tunggal) atau dua pasangan (ganda) yang saling berlawanan. Tujuannya adalah memukul kok (shuttlecock) melewati jaring (net) agar jatuh di area lapangan lawan, dan mencegah kok jatuh di lapangan sendiri atau dikembalikan lawan dengan benar. Permainan ini membutuhkan kecepatan, kelincahan, kekuatan, dan koordinasi untuk mengalahkan lawan.</dl>
-        </article>
-        <article>
-        <b><li>Ngedit tipis"</li></b>
-            <dl>Terkadang aku suka ngedit tapi yang simple aja, palingan tugasla atau apala. tapi ga seaktip jaman kopit, tebak napa. YAP KARNA <a href="https://www.capcut.com/id-id">APLIKASI KIKIR</a> yang kebelet haji ni ha.</dl>
-        </article>
-        <article>
-        <b><li>Design</li></b>
-            <dl>lebih suka design daripada ngedit, tapi minesnya gapande mikir konsep, tapi sih kalo dikasih konsep bisa-bisa aja, ngerti gasie, kalo konsep sendiri kek jelek aja akhirnya ngestuck, kadang sih ada beberapa juga yang bagus tapi masi kureng aja rasanya.</dl>
-        </article>
-        <article>
-        <b><li>ML</li></b>
-            <dl>ga hobby" kali sih tapi lumayan la buat ngurangin stres, karna mainnya enjoy aja, ndak kompe kali.</dl>
-        </article>
-        <article>
-        <b><li>Belajar skill baru</li></b>
-            <dl>"Liat tiktok > Menarik > Termotivasi > Coba > "Gagal" ahh🥀🥀 wokwok.</dl>
-        </article>
-    </ul>
-</main>
+    <article>
+      <ul><li>Ngedit tipis"</li></ul>
+      <dl>Terkadang aku suka ngedit tapi yang simple aja, palingan tugasla atau apala. tapi ga seaktip jaman kopit, tebak napa. YAP KARNA <a href="https://www.capcut.com/id-id" style="color: white;">APLIKASI KIKIR</a> yang kebelet haji ni ha.</dl>
+    </article>
 
-<footer style="text-align: center;">
+    <article>
+      <ul><li>Design</li></ul>
+      <dl>lebih suka design daripada ngedit, tapi minesnya gapande mikir konsep, tapi sih kalo dikasih konsep bisa-bisa aja, ngerti gasie, kalo konsep sendiri kek jelek aja akhirnya ngestuck, kadang sih ada beberapa juga yang bagus tapi masi kureng aja rasanya.</dl>
+    </article>
+
+    <article>
+      <ul><li>ML</li></ul>
+      <dl>Gak hobby banget sih, tapi lumayan buat ngurangin stres, karna mainnya enjoy aja</dl>
+    </article>
+
+    <article>
+      <ul><li>Belajar skill baru</li></ul>
+      <dl>"Liat tiktok > Menarik > Termotivasi > Coba > 'Gagal' ahh🥀🥀 wokwok."</dl>
+    </article>
+  </main>
+
+  <footer>
     <p>🚀 developed by @rappnrhlm_ 🚀</p>
-</footer>
-
+  </footer>
 </body>
 </html>
